@@ -1,0 +1,3 @@
+rootProject.name = 'DroidconMadrid19'
+
+include ':app'
