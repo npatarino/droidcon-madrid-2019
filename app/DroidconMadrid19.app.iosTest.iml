@@ -5,8 +5,8 @@
       <configuration version="3" platform="Native " allPlatforms="Native []" useProjectSettings="false" isTestModule="true" externalProjectId=":app">
         <sourceSets>
           <sourceSet>DroidconMadrid19.app.commonTest</sourceSet>
-          <sourceSet>DroidconMadrid19.app.iosMain</sourceSet>
           <sourceSet>DroidconMadrid19.app.commonMain</sourceSet>
+          <sourceSet>DroidconMadrid19.app.iosMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
@@ -21,7 +21,9 @@
             </array>
           </option>
           <option name="pluginClasspaths">
-            <array />
+            <array>
+              <option value="$KOTLIN_BUNDLED$/lib/kotlinx-serialization-compiler-plugin.jar" />
+            </array>
           </option>
           <option name="multiPlatform" value="true" />
           <option name="errors">
