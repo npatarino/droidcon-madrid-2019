@@ -1,4 +1,7 @@
-[
+package data
+
+val SESSIONS = """
+    [
   {
     "groupId": 10663,
     "groupName": "Technical",
@@ -304,3 +307,4 @@
     ]
   }
 ]
+""".trimIndent()

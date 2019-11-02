@@ -3,6 +3,13 @@ package data
 import kotlinx.serialization.Serializable
 
 @Serializable
+data class SessionGroupDto(
+    val groupId: Int,
+    val groupName: String,
+    val sessions: List<SessionDto>
+)
+
+@Serializable
 data class SessionDto(
     val id: String,
     val title: String,
@@ -13,7 +20,7 @@ data class SessionDto(
     val isPlenumSession: Boolean,
     val speakers: List<SpeakerDto>,
     //val categories: List<CategoryDto>,
-    val roomId: String?,
+    val roomId: Int?,
     val room: String?
 )
 
