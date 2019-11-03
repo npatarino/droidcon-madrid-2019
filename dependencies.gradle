@@ -7,7 +7,6 @@ ext.deps = [
                 'commonCore' : "io.ktor:ktor-client-core:${versions.ktor}",
                 'commonJson' : "io.ktor:ktor-client-json:${versions.ktor}",
                 'commonTest' : "io.ktor:ktor-client-mock:${versions.ktor}",
-                'jvmCore'    : "io.ktor:ktor-client-core-jvm:${versions.ktor}",
                 'androidCore': "io.ktor:ktor-client-okhttp:${versions.ktor}",
                 'jvmJson'    : "io.ktor:ktor-client-json-jvm:${versions.ktor}",
                 'jvmTest'    : "io.ktor:ktor-client-mock-jvm:${versions.ktor}",

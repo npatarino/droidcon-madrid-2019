@@ -1,8 +1,8 @@
 package sample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import ui.SessionsFragment
 
 actual class Sample {
     actual fun checkMe() = 44
@@ -16,8 +16,15 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Sample().checkMe()
         setContentView(R.layout.activity_main)
-        findViewById<TextView>(R.id.main_text).text = hello()
+        setUpSessions()
+    }
+
+    private fun setUpSessions() {
+        val fragment = SessionsFragment.build()
+        supportFragmentManager.beginTransaction().apply {
+            add(R.id.fragmentHost, fragment, SessionsFragment.TAG)
+            commit()
+        }
     }
 }

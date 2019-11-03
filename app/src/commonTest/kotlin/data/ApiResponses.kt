@@ -18,7 +18,7 @@ val SESSIONS = """
           }
         ],
         "id": "14022",
-        "title": "Aiden's Session",
+        "title": "Aiden's SessionData",
         "description": "Usually, you would find a session description here. But, this is not a real session submission, so description is missing. Ha!",
         "startsAt": "2017-05-27T09:00:00Z",
         "endsAt": "2017-05-27T10:00:00Z",
@@ -33,11 +33,11 @@ val SESSIONS = """
         "categories": [
           {
             "id": 2124,
-            "name": "Session format",
+            "name": "SessionData format",
             "categoryItems": [
               {
                 "id": 4373,
-                "name": "Session"
+                "name": "SessionData"
               }
             ],
             "sort": 0
@@ -91,7 +91,7 @@ val SESSIONS = """
           }
         ],
         "id": "14023",
-        "title": "Lucas's Session",
+        "title": "Lucas's SessionData",
         "description": "Usually, you would find a session description here. But, this is not a real session submission, so description is missing. Ha!",
         "startsAt": "2017-05-27T11:30:00Z",
         "endsAt": "2017-05-27T12:30:00Z",
@@ -106,11 +106,11 @@ val SESSIONS = """
         "categories": [
           {
             "id": 2124,
-            "name": "Session format",
+            "name": "SessionData format",
             "categoryItems": [
               {
                 "id": 4373,
-                "name": "Session"
+                "name": "SessionData"
               }
             ],
             "sort": 0
@@ -164,7 +164,7 @@ val SESSIONS = """
           }
         ],
         "id": "14027",
-        "title": "Mia's Session",
+        "title": "Mia's SessionData",
         "description": "Usually, you would find a session description here. But, this is not a real session submission, so description is missing. Ha!",
         "startsAt": "2017-05-28T09:00:00Z",
         "endsAt": "2017-05-28T10:00:00Z",
@@ -179,7 +179,7 @@ val SESSIONS = """
         "categories": [
           {
             "id": 2124,
-            "name": "Session format",
+            "name": "SessionData format",
             "categoryItems": [
               {
                 "id": 4372,
@@ -243,7 +243,7 @@ val SESSIONS = """
           }
         ],
         "id": "14019",
-        "title": "Jackson's Session",
+        "title": "Jackson's SessionData",
         "description": "Usually, you would find a session description here. But, this is not a real session submission, so description is missing. Ha!",
         "startsAt": "2017-05-27T10:15:00Z",
         "endsAt": "2017-05-27T11:15:00Z",
@@ -258,7 +258,7 @@ val SESSIONS = """
         "categories": [
           {
             "id": 2124,
-            "name": "Session format",
+            "name": "SessionData format",
             "categoryItems": [
               {
                 "id": 4372,

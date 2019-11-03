@@ -1,43 +1,7 @@
-package data
+package data.network
 
-import data.network.SessionDto
-import data.network.SessionGroupDto
-import data.network.RealSessionsApiClient
-import data.network.SpeakerDto
-import io.ktor.client.engine.mock.MockEngine
-import io.ktor.client.engine.mock.respond
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonConfiguration
-import runBlocking
-import kotlin.test.Test
-import kotlin.test.assertEquals
-
-class SessionsApiClientIT {
-
-    private val httpClientEngineMock = MockEngine.create {
-        addHandler { requestData ->
-            when (requestData.url.toString()) {
-                "https://www.sessionize.com/sessions" -> respond(SESSIONS)
-                else -> respond("")
-            }
-        }
-    }
-
-    private val json = Json(JsonConfiguration.Stable.copy(strictMode = false))
-
-    private val sut = RealSessionsApiClient(
-        httpClientEngine = httpClientEngineMock,
-        json = json
-    )
-
-    @Test
-    fun `getSessions happy case`() = runBlocking {
-        val sessions = sut.getSessions()
-
-        assertEquals(expectedSessionGroups(), sessions)
-    }
-
-    private fun expectedSessionGroups(): List<SessionGroupDto> = listOf(
+class FakeSessionsApiClient : SessionsApiClient {
+    override suspend fun getSessions(): List<SessionGroupDto> = listOf(
         SessionGroupDto(
             groupId = 10663,
             groupName = "Technical",

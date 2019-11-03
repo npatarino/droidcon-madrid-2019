@@ -1,4 +1,4 @@
-package data
+package data.network
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
@@ -8,14 +8,14 @@ import io.ktor.http.takeFrom
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.list
 
-class SessionsApiClient(
+class RealSessionsApiClient(
     httpClientEngine: HttpClientEngine,
     private val json: Json
-) {
+) : SessionsApiClient {
 
     private val httpClient = HttpClient(httpClientEngine)
 
-    suspend fun getSessions(): List<SessionGroupDto> {
+    override suspend fun getSessions(): List<SessionGroupDto> {
         val serializedSessions = httpClient.get<String> { sessionize("sessions") }
         return json.parse(SessionGroupDto.serializer().list, serializedSessions)
     }
